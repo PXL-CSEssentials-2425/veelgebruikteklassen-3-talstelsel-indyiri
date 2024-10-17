@@ -20,5 +20,32 @@ namespace H4Oef3Talstelsel
         {
             InitializeComponent();
         }
+
+        StringBuilder sb = new StringBuilder();
+
+        private void closeButton_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+
+        private void againButton_Click(object sender, RoutedEventArgs e)
+        {
+            hexadecimalTextBox.Clear();
+            decimalTextBox.Clear();
+        }
+
+        private void convertButton_Click(object sender, RoutedEventArgs e)
+        {
+            string inputHexadecimal = hexadecimalTextBox.Text;
+            int outputDecimal;
+
+            for (int placeOfNumberOrLetter = 1; placeOfNumberOrLetter <= inputHexadecimal.Length; placeOfNumberOrLetter++)
+            {
+                outputDecimal = int.Parse(inputHexadecimal, System.Globalization.NumberStyles.HexNumber);
+                sb.Append(outputDecimal);
+            }
+            
+            decimalTextBox.Text = sb.ToString;
+        }
     }
 }
