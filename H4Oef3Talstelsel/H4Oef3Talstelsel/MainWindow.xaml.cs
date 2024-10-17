@@ -21,8 +21,6 @@ namespace H4Oef3Talstelsel
             InitializeComponent();
         }
 
-        StringBuilder sb = new StringBuilder();
-
         private void closeButton_Click(object sender, RoutedEventArgs e)
         {
             Close();
@@ -37,15 +35,13 @@ namespace H4Oef3Talstelsel
         private void convertButton_Click(object sender, RoutedEventArgs e)
         {
             string inputHexadecimal = hexadecimalTextBox.Text;
-            int outputDecimal;
+            int outputDecimal = 0;
 
             for (int placeOfNumberOrLetter = 1; placeOfNumberOrLetter <= inputHexadecimal.Length; placeOfNumberOrLetter++)
             {
-                outputDecimal = int.Parse(inputHexadecimal, System.Globalization.NumberStyles.HexNumber);
-                sb.Append(outputDecimal);
+                outputDecimal = int.Parse(inputHexadecimal, System.Globalization.NumberStyles.HexNumber);               
             }
-
-            decimalTextBox.Text = sb.ToString;
+            decimalTextBox.Text = $"{outputDecimal}";
         }
     }
 }
