@@ -44,7 +44,7 @@ namespace H4Oef3Talstelsel
                 outputDecimal = int.Parse(inputHexadecimal, System.Globalization.NumberStyles.HexNumber);
                 sb.Append(outputDecimal);
             }
-            
+
             decimalTextBox.Text = sb.ToString;
         }
     }
