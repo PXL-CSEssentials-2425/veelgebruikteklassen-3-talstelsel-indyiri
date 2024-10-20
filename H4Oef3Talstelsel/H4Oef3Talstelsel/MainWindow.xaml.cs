@@ -43,5 +43,27 @@ namespace H4Oef3Talstelsel
             }
             decimalTextBox.Text = $"{outputDecimal}";
         }
+
+        private void hexadecimalTextBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                string inputHexadecimal = hexadecimalTextBox.Text;
+                int outputDecimal = 0;
+
+                if (inputHexadecimal.Contains("A") || inputHexadecimal.Contains("B") || inputHexadecimal.Contains("C") || inputHexadecimal.Contains("D") || inputHexadecimal.Contains("E") || inputHexadecimal.Contains("F") || inputHexadecimal.Contains("1") || inputHexadecimal.Contains("2") || inputHexadecimal.Contains("3") || inputHexadecimal.Contains("4") || inputHexadecimal.Contains("5") || inputHexadecimal.Contains("6") || inputHexadecimal.Contains("7") || inputHexadecimal.Contains("8") || inputHexadecimal.Contains("9") || inputHexadecimal.Contains("0") || inputHexadecimal.Contains(" "))
+                {
+                    for (int placeOfNumberOrLetter = 1; placeOfNumberOrLetter <= inputHexadecimal.Length; placeOfNumberOrLetter++)
+                    {
+                        outputDecimal = int.Parse(inputHexadecimal, System.Globalization.NumberStyles.HexNumber);
+                    }
+                    decimalTextBox.Text = $"{outputDecimal}";
+                }
+                else
+                {
+                    decimalTextBox.Text = "Foutieve waarde ingegeven; mag enkel 0123456789ABCDEF bevatten";
+                }               
+            }
+        }
     }
 }

@@ -9,8 +9,8 @@
     <Grid>
         <Label x:Name="hexadecimalLabel" Content="Hexadecimale waarde" HorizontalAlignment="Left" Height="37" Margin="62,94,0,0" VerticalAlignment="Top" Width="215" FontWeight="Bold" HorizontalContentAlignment="Center"/>
         <Label x:Name="decimalLabel" Content="Decimale waarde" HorizontalAlignment="Left" Height="37" Margin="391,94,0,0" VerticalAlignment="Top" Width="215" FontWeight="Bold" HorizontalContentAlignment="Center"/>
-        <TextBox x:Name="hexadecimalTextBox" HorizontalAlignment="Left" Height="34" Margin="62,175,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="215"/>
-        <TextBox x:Name="decimalTextBox" HorizontalAlignment="Left" Height="34" Margin="391,175,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" IsEnabled="False"/>
+        <TextBox x:Name="hexadecimalTextBox" HorizontalAlignment="Left" Height="34" Margin="62,175,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" KeyDown="hexadecimalTextBox_KeyDown"/>
+        <TextBox x:Name="decimalTextBox" HorizontalAlignment="Left" Height="34" Margin="391,175,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="330" IsEnabled="False"/>
         <Button x:Name="convertButton" Content="Omzetten" HorizontalAlignment="Left" Height="39" Margin="62,253,0,0" VerticalAlignment="Top" Width="119" Click="convertButton_Click"/>
         <Button x:Name="closeButton" Content="Afsluiten" HorizontalAlignment="Left" Height="39" Margin="487,253,0,0" VerticalAlignment="Top" Width="119" Click="closeButton_Click"/>
         <Button x:Name="againButton" Content="Opnieuw" HorizontalAlignment="Left" Height="39" Margin="272,253,0,0" VerticalAlignment="Top" Width="119" Click="againButton_Click"/>
